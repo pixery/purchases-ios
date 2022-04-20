@@ -6,15 +6,20 @@
 //
 
 import UIKit
+
+import FirebaseCore
 import RevenueCat
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        FirebaseApp.configure()
+
         /* Enable debug logs before calling `configure`. */
         Purchases.logLevel = .debug
+        
+        // Purchases.proxyURL = URL(string: "http://192.168.1.66:8000")
 
         /*
          Initialize the RevenueCat Purchases SDK.
@@ -24,14 +29,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             - observerMode is false, so Purchases will automatically handle finishing transactions. Read more about Observer Mode here: https://docs.revenuecat.com/docs/observer-mode
          */
         
-        Purchases.configure(withAPIKey: Constants.apiKey,
-                            appUserID: nil,
-                            observerMode: false,
-                            userDefaults: nil,
-                            useStoreKit2IfAvailable: true)
+        Purchases.configure(withAPIKey: Constants.apiKey
+//                            appUserID: nil,
+//                            observerMode: false,
+//                            userDefaults: nil
+                            //useStoreKit2IfAvailable: true
+        )
         
+
         /// - Set the delegate to this instance of AppDelegate. Scroll down to see this implementation.
         Purchases.shared.delegate = self
+        
+
+//        let instanceID = Analytics.appInstanceID();
+//
+//        if let unwrapped = instanceID {
+//            print("instance ID -> " + unwrapped);
+//            print("Setting Attributes");
+//            Purchases.shared.setAttributes(["$firebaseAppInstanceId": unwrapped])
+//        } else {
+//            print("intance ID -> NOT FOUND!");
+//        }
         
         return true
     }

@@ -9,6 +9,8 @@ import StoreKit
 import UIKit
 import RevenueCat
 
+import FirebaseCore
+
 /*
  An example paywall that uses the current offering.
  Configured in /Resources/UI/Paywall.storyboard
@@ -29,6 +31,20 @@ class PaywallViewController: UITableViewController {
             if let error = error {
                 print(error.localizedDescription)
             }
+            
+//            let instanceID = Analytics.appInstanceID();
+//            
+//            if let unwrapped = instanceID {
+//                print("instance ID -> " + unwrapped);
+//            } else {
+//                print("intance ID -> NOT FOUND!");
+//            }
+//            
+
+//            Analytics.logEvent("share_image", parameters: [
+//              "name": "foo" as NSObject,
+//              "full_text": "foo test" as NSObject,
+//            ])
             
             self.offering = offerings?.current
             self.tableView.reloadData()

@@ -7,6 +7,8 @@
 
 import UIKit
 import RevenueCat
+import FirebaseAuth
+
 
 /*
  The app's main view controller that displays our pretend weather data.
@@ -23,6 +25,15 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Auth.auth().signInAnonymously { authResult, error in
+            guard let user = authResult?.user else { return }
+            let isAnonymous = user.isAnonymous  // true
+            let uid = user.uid
+            print("[DEBUG] Logging in with -> " + uid);
+            Purchases.shared.logIn(uid) { (_, _, _) in }
+        }
+
         
         /// - Set the default weather data on load
         setWeatherData(.testCold)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,10 +22,13 @@
 		5582ECE02587EF8800ACB34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582ECDF2587EF8800ACB34B /* Assets.xcassets */; };
 		5582ECE32587EF8800ACB34B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582ECE12587EF8800ACB34B /* LaunchScreen.storyboard */; };
 		5582ECFA2587F29600ACB34B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582ECF92587F29600ACB34B /* Constants.swift */; };
-		8380C26626FE001500922AB1 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8380C26526FE001500922AB1 /* RevenueCat */; };
+		AB766FA54752A36B91F570BF /* Pods_MagicWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E3E81A417A91FB0EC4F92 /* Pods_MagicWeather.framework */; };
+		F0656CF127C6DE7C00E82A34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0656CF027C6DE7C00E82A34 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241E3E81A417A91FB0EC4F92 /* Pods_MagicWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F475BB52EF61319F94740E /* Pods-MagicWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicWeather.debug.xcconfig"; path = "Target Support Files/Pods-MagicWeather/Pods-MagicWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		5539DF1C258806A10073FB19 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5539DF1F25880AB80073FB19 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		5539DF23258A9AA70073FB19 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
@@ -44,6 +47,8 @@
 		5582ECE22587EF8800ACB34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5582ECE42587EF8800ACB34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5582ECF92587F29600ACB34B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6C71BA68CD2143A2443F0368 /* Pods-MagicWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicWeather.release.xcconfig"; path = "Target Support Files/Pods-MagicWeather/Pods-MagicWeather.release.xcconfig"; sourceTree = "<group>"; };
+		F0656CF027C6DE7C00E82A34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8380C26626FE001500922AB1 /* RevenueCat in Frameworks */,
+				AB766FA54752A36B91F570BF /* Pods_MagicWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,7 @@
 				5582ECD52587EF8500ACB34B /* MagicWeather */,
 				5582ECD42587EF8500ACB34B /* Products */,
 				8380C26426FE001500922AB1 /* Frameworks */,
+				641774D737DA18F25DA64BA5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +93,7 @@
 		5582ECD52587EF8500ACB34B /* MagicWeather */ = {
 			isa = PBXGroup;
 			children = (
+				F0656CF027C6DE7C00E82A34 /* GoogleService-Info.plist */,
 				5582ECF92587F29600ACB34B /* Constants.swift */,
 				5582ECEF2587EFD100ACB34B /* Sources */,
 				5582ECF42587F01E00ACB34B /* Resources */,
@@ -155,9 +162,19 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		641774D737DA18F25DA64BA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41F475BB52EF61319F94740E /* Pods-MagicWeather.debug.xcconfig */,
+				6C71BA68CD2143A2443F0368 /* Pods-MagicWeather.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8380C26426FE001500922AB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				241E3E81A417A91FB0EC4F92 /* Pods_MagicWeather.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5582ECE72587EF8800ACB34B /* Build configuration list for PBXNativeTarget "MagicWeather" */;
 			buildPhases = (
+				8F7C5C840FEBF2AAA292E272 /* [CP] Check Pods Manifest.lock */,
 				5582ECCF2587EF8500ACB34B /* Sources */,
 				5582ECD02587EF8500ACB34B /* Frameworks */,
 				5582ECD12587EF8500ACB34B /* Resources */,
+				5858EE0BB234D6A2525839B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,7 +198,6 @@
 			);
 			name = MagicWeather;
 			packageProductDependencies = (
-				8380C26526FE001500922AB1 /* RevenueCat */,
 			);
 			productName = "Magic Weather";
 			productReference = 5582ECD32587EF8500ACB34B /* MagicWeather.app */;
@@ -209,7 +227,6 @@
 			);
 			mainGroup = 5582ECCA2587EF8500ACB34B;
 			packageReferences = (
-				5582ECEB2587EFC800ACB34B /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 5582ECD42587EF8500ACB34B /* Products */;
 			projectDirPath = "";
@@ -230,10 +247,53 @@
 				5539DF2D2592A07A0073FB19 /* SplashScreen.storyboard in Resources */,
 				5582ECE02587EF8800ACB34B /* Assets.xcassets in Resources */,
 				5582ECDE2587EF8500ACB34B /* Main.storyboard in Resources */,
+				F0656CF127C6DE7C00E82A34 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5858EE0BB234D6A2525839B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicWeather/Pods-MagicWeather-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicWeather/Pods-MagicWeather-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagicWeather/Pods-MagicWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F7C5C840FEBF2AAA292E272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagicWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5582ECCF2587EF8500ACB34B /* Sources */ = {
@@ -393,18 +453,19 @@
 		};
 		5582ECE82587EF8800ACB34B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F475BB52EF61319F94740E /* Pods-MagicWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8SXR2327BM;
 				INFOPLIST_FILE = MagicWeather/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.revenuecat.sampleapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revenuecat.firebasetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,18 +474,19 @@
 		};
 		5582ECE92587EF8800ACB34B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C71BA68CD2143A2443F0368 /* Pods-MagicWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8SXR2327BM;
 				INFOPLIST_FILE = MagicWeather/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.revenuecat.sampleapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revenuecat.firebasetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,25 +515,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5582ECEB2587EFC800ACB34B /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8380C26526FE001500922AB1 /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5582ECEB2587EFC800ACB34B /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = RevenueCat;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5582ECCB2587EF8500ACB34B /* Project object */;
 }
