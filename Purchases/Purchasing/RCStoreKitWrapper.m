@@ -114,13 +114,7 @@ static BOOL _simulatesAskToBuyInSandbox = NO;
 - (void)paymentQueue:(SKPaymentQueue *)queue
  removedTransactions:(NSArray<SKPaymentTransaction *> *)transactions {
     for (SKPaymentTransaction *transaction in transactions) {
-        RCDebugLog(RCStrings.purchase.paymentqueue_removedtransaction,
-                   transaction.payment.productIdentifier,
-                   transaction.transactionIdentifier,
-                   transaction.originalTransaction.transactionIdentifier,
-                   transaction.error,
-                   transaction.error.userInfo,
-                   (long)transaction.transactionState);
+        // RCDebugLog removed from this line because sometimes it can cause crash when user close subscription sheet without purchase.
         [self.delegate storeKitWrapper:self removedTransaction:transaction];
     }
 }
